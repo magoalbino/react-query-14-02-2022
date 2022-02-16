@@ -22,6 +22,7 @@ essa função então pode ser usada com qualquer interface
  É interessante avaliar a necessidade de fazer uma nova requisição ao servidor quando um valor da listagem for atualizado a partir de um formulário.
  A listagem pode ser atualizada a partir do cache do React Query, como no código abaixo do arquivo Repo.tsx
  
+ ```cl
  const previousRepos = queryClient.getQueryData<Repository[]>('repos')
 
     if (previousRepos) {
@@ -35,6 +36,7 @@ essa função então pode ser usada com qualquer interface
 
       queryClient.setQueryData('repos', nextRepos)
     }
+```
 
 ## 🔨 Features
 
